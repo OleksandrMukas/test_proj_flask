@@ -1,16 +1,28 @@
-name: CI
+#------------------------------------------------------
+# Github Actions - Basics
+#
+# Copyleft (c) by Oleksandr Mukas 2026.
+#------------------------------------------------------
+name: My-Actions-Basics
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  my_testing:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Run a one-line script
-        run: echo Hello, World!
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Print Hello message
+        run: echo "Hello from Testing job"
+          
+  my_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello message
+        run: echo "Hello from Deploy job"
+          
+    
