@@ -31,6 +31,12 @@ jobs:
           
       - name: List current folder
         run: ls -la
+        
+      - name: Git clone my repo
+        uses: actions/checkout@v6
+
+      - name: List current folder
+        run: ls -la
           
   my_deploy:
     runs-on: ubuntu-latest
